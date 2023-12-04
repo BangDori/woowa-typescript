@@ -1,5 +1,5 @@
 {
-  "include": ["src/*.ts"],
+  "include": ["src/*.ts", "src/domain/Lotto.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "esm": true
