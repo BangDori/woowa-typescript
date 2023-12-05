@@ -1,10 +1,16 @@
-# woowa-typescript
+# 우아한 타이스크립트 with 리액트
 
-## 책
+## Chapter 1
 
-우아한 타이스크립트 with 리액트 (2023.12.01 ~
+1. [웹 개발의 역사](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+%EC%9B%B9+%EA%B0%9C%EB%B0%9C%EC%9D%98+%EC%97%AD%EC%82%AC)
+2. [자바스크립트의 역사](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+1.2+%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98+%ED%95%9C%EA%B3%84)
 
-## 개인 공부
+## Chapter 2
+
+1. [타입이란](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.1+%ED%83%80%EC%9E%85%EC%9D%B4%EB%9E%80+%281%29)
+2. [타입스크립트의 타입 시스템](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.2+%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98+%ED%83%80%EC%9E%85+%EC%8B%9C%EC%8A%A4%ED%85%9C+%281%29)
+
+## 미니 프로젝트
 
 1. 우아한 테크코스 6기 프리코스 **baseball** [Javascript](https://github.com/BangDori/javascript-baseball-6/tree/BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-baseball)
 2. 우아한 테크코스 6기 프리코스 **racingcar** [Javascript](https://github.com/BangDori/javascript-racingcar-6/tree/BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-racingcar)
