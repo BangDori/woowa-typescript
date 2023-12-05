@@ -44,7 +44,7 @@ class Statistics {
     return this.rankBoard;
   }
 
-  calculateTotalRevenue(): number {
+  calculateTotalRevenueRate(): number {
     const totalRevenue = Object.entries(this.rankBoard).reduce(
       (totalRevenue, [rank, count]) => {
         return totalRevenue + PRIZE[rank] * count;

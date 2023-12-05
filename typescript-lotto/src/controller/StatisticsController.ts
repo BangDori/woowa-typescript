@@ -32,7 +32,7 @@ class StatisticsController {
   }
 
   showTotalRevenueRate(statistics: Statistics) {
-    const totalRevenueRate: number = statistics.calculateTotalRevenue();
+    const totalRevenueRate: number = statistics.calculateTotalRevenueRate();
     OutputView.printTotalRevenueRate(totalRevenueRate);
   }
 }
