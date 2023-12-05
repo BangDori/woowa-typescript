@@ -5,7 +5,7 @@ class Lotto {
     this.numbers = this.sortNumbers(numbers);
   }
 
-  sortNumbers(numbers: number[]) {
+  private sortNumbers(numbers: number[]) {
     return numbers.sort((a, b) => a - b);
   }
 

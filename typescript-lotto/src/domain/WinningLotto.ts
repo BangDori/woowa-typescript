@@ -1,11 +1,11 @@
 import MatchResult from "../types/MatchResult.js";
+import Lotto from "./Lotto.js";
 
-class WinningNumber {
-  private readonly winningNumbers: number[];
+class WinningLotto extends Lotto {
   private readonly bonusNumber: number;
 
   constructor(winningNumbers: number[], bonusNumber: number) {
-    this.winningNumbers = winningNumbers;
+    super(winningNumbers);
     this.bonusNumber = bonusNumber;
   }
 
@@ -26,7 +26,8 @@ class WinningNumber {
   }
 
   includeWinningNumbers(lottoNumber: number): boolean {
-    return this.winningNumbers.includes(lottoNumber);
+    const winningNumbers = this.getNumbers();
+    return winningNumbers.includes(lottoNumber);
   }
 
   includeBonusNumber(lottoNumbers: number[]): boolean {
@@ -34,4 +35,4 @@ class WinningNumber {
   }
 }
 
-export default WinningNumber;
+export default WinningLotto;

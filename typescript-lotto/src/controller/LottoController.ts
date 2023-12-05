@@ -1,24 +1,24 @@
 import Lotto from "../domain/Lotto.js";
 import InputView from "../view/InputView.js";
-import LottoMachine from "../domain/LottoMachine.js";
-import WinningNumber from "../domain/WinningNumber.js";
+import LottoService from "../service/LottoService.js";
+
+import WinningNumber from "../domain/WinningLotto.js";
 import MatchResult from "../types/MatchResult.js";
-import Statistics from "../domain/Statistics.js";
 import OutputView from "../view/OutputView.js";
-import { StatisticsInfo } from "../types/Statistics.js";
 
 class LottoController {
-  private readonly lottoMachine: LottoMachine;
-  private readonly statistics: Statistics;
+  // Domain보다는 Service의 역할에 가까움. lottoMachine -> lottoService
+  private readonly lottoService: LottoService;
 
   constructor() {
-    this.lottoMachine = new LottoMachine();
-    this.statistics = new Statistics();
+    this.lottoService = new LottoService();
   }
 
   async buyLottos(): Promise<Lotto[]> {
     const money: number = await InputView.readMoney();
-    const lottos: Lotto[] = this.lottoMachine.buyLottos(money);
+    const lottos: Lotto[] = this.lottoService.buyLottos(money);
+
+    OutputView.printLottos(lottos);
 
     return lottos;
   }
@@ -26,29 +26,22 @@ class LottoController {
   async setWinningNumber(): Promise<WinningNumber> {
     const winningNumbers: number[] = await InputView.readWinningNumbers();
     const bonusNumber: number = await InputView.readBonusNumber(winningNumbers);
+    const winningLotto = this.lottoService.makeWinningLotto(
+      winningNumbers,
+      bonusNumber
+    );
 
-    return new WinningNumber(winningNumbers, bonusNumber);
+    return winningLotto; // Service 추출 고려
   }
 
   compareLottos(lottos: Lotto[], winningNumber: WinningNumber) {
-    lottos.forEach((lotto: Lotto) => {
+    return lottos.map((lotto: Lotto) => {
       const lottoNumbers: number[] = lotto.getNumbers();
       const matchResult: MatchResult = winningNumber.compareLotto(lottoNumbers);
-      this.statistics.updateMatchResult(matchResult);
+
+      // this.statistics.updateMatchResult(matchResult); // update 로직이 너무 많이 발생함
+      return matchResult;
     });
-  }
-
-  showStatistics() {
-    const board = this.statistics.getStatistics();
-
-    const statisticsInfo: StatisticsInfo = Object.entries(board).reverse();
-    OutputView.printStatistics(statisticsInfo);
-  }
-
-  showTotalRevenueRate(money: number) {
-    const totalRevenue: number = this.statistics.calculateTotalRevenue();
-    const totalRevenueRate = (totalRevenue / money) * 100;
-    OutputView.printTotalRevenueRate(totalRevenueRate);
   }
 }
 

@@ -1,22 +1,29 @@
-import { LOTTO_PRICE } from "./constant/setting.js";
 import LottoController from "./controller/LottoController.js";
+import StatisticsController from "./controller/StatisticsController.js";
 import Lotto from "./domain/Lotto.js";
+import MatchResult from "./types/MatchResult.js";
 import { rl } from "./view/InputView.js";
-import OutputView from "./view/OutputView.js";
 
 class App {
+  private readonly lottoController: LottoController;
+  private readonly statisticsController: StatisticsController;
+
+  constructor() {
+    this.lottoController = new LottoController();
+    this.statisticsController = new StatisticsController();
+  }
+
   async play() {
-    const lottoController = new LottoController();
+    const lottos: Lotto[] = await this.lottoController.buyLottos();
+    const winningNumber = await this.lottoController.setWinningNumber();
+    const result: MatchResult[] = this.lottoController.compareLottos(
+      lottos,
+      winningNumber
+    ); // 결과를 받아옴
 
-    const lottos: Lotto[] = await lottoController.buyLottos();
-    OutputView.printLottos(lottos);
-
-    const winningNumber = await lottoController.setWinningNumber();
-    lottoController.compareLottos(lottos, winningNumber);
-
-    lottoController.showStatistics();
-    lottoController.showTotalRevenueRate(lottos.length * LOTTO_PRICE);
-
+    const statistics =
+      this.statisticsController.makeStatisticsBasedResult(result);
+    this.statisticsController.showTotalRevenueRate(statistics);
     rl.close();
   }
 }

@@ -1,19 +1,31 @@
 import RankBoard from "../types/RankBoard.js";
 import MatchResult from "../types/MatchResult.js";
-import { MATCH_COUNT, NO_RANK, PRIZE, RANK } from "../constant/statistics.js";
+import {
+  INITIAL_RANK_BOARD,
+  MATCH_COUNT,
+  NO_RANK,
+  PRIZE,
+  RANK,
+} from "../constant/statistics.js";
+import { LOTTO_PRICE } from "../constant/setting.js";
 
 class Statistics {
-  private board: RankBoard;
+  private rankBoard: RankBoard;
+  private readonly money: number;
 
-  constructor() {
-    this.board = { first: 0, second: 0, third: 0, fourth: 0, fifth: 0 };
+  constructor(result: MatchResult[]) {
+    this.rankBoard = this.getResultBoard(result);
+    this.money = result.length * LOTTO_PRICE;
   }
 
-  updateMatchResult(matchResult: MatchResult) {
-    const rank: string = this.getRank(matchResult);
+  private getResultBoard(result: MatchResult[]) {
+    return result.reduce((state: RankBoard, matchResult: MatchResult) => {
+      const rank: string = this.getRank(matchResult);
+      if (rank === NO_RANK) return state;
 
-    if (rank === NO_RANK) return;
-    this.board[rank] += 1;
+      state[rank] += 1;
+      return state;
+    }, INITIAL_RANK_BOARD);
   }
 
   private getRank(matchResult: MatchResult): string {
@@ -28,14 +40,20 @@ class Statistics {
     return NO_RANK;
   }
 
-  getStatistics(): RankBoard {
-    return this.board;
+  getRankBoard() {
+    return this.rankBoard;
   }
 
   calculateTotalRevenue(): number {
-    return Object.entries(this.board).reduce((totalRevenue, [rank, count]) => {
-      return totalRevenue + PRIZE[rank] * count;
-    }, 0);
+    const totalRevenue = Object.entries(this.rankBoard).reduce(
+      (totalRevenue, [rank, count]) => {
+        return totalRevenue + PRIZE[rank] * count;
+      },
+      0
+    );
+    const totalRevenueRate = (totalRevenue / this.money) * 100;
+
+    return totalRevenueRate;
   }
 }
 

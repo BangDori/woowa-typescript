@@ -1,8 +1,9 @@
+import WinningLotto from "../domain/WinningLotto.js";
 import { LOTTO_PRICE } from "../constant/setting.js";
-import Lotto from "./Lotto.js";
+import Lotto from "../domain/Lotto.js";
 import { generateLottoNumbers } from "../util/generator.js";
 
-class LottoMachine {
+class LottoService {
   buyLottos(money: number) {
     const lottoCount = money / LOTTO_PRICE;
     const lottos: Lotto[] = [];
@@ -19,6 +20,11 @@ class LottoMachine {
     const lottoNumbers: number[] = generateLottoNumbers();
     return new Lotto(lottoNumbers);
   }
+
+  makeWinningLotto(winningNumbers: number[], bonusNumber: number) {
+    const winningLotto = new WinningLotto(winningNumbers, bonusNumber);
+    return winningLotto;
+  }
 }
 
-export default LottoMachine;
+export default LottoService;

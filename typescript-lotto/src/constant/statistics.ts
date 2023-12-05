@@ -1,5 +1,15 @@
+import RankBoard from "../types/RankBoard.js";
 import { MatchCount, Rank, Prize } from "../types/Statistics.js";
+
 export const NO_RANK = "NO_RANK";
+
+export const INITIAL_RANK_BOARD: RankBoard = {
+  first: 0,
+  second: 0,
+  third: 0,
+  fourth: 0,
+  fifth: 0,
+};
 
 export const MATCH_COUNT: MatchCount = Object.freeze({
   first: 6,
