@@ -1,5 +1,7 @@
+import { LOTTO_PRICE } from "./constant/setting.js";
 import LottoController from "./controller/LottoController.js";
 import Lotto from "./domain/Lotto.js";
+import { rl } from "./view/InputView.js";
 import OutputView from "./view/OutputView.js";
 
 class App {
@@ -11,6 +13,11 @@ class App {
 
     const winningNumber = await lottoController.setWinningNumber();
     lottoController.compareLottos(lottos, winningNumber);
+
+    lottoController.showStatistics();
+    lottoController.showTotalRevenueRate(lottos.length * LOTTO_PRICE);
+
+    rl.close();
   }
 }
 

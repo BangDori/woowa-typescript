@@ -1,13 +1,15 @@
-export const MATCH_COUNT = Object.freeze({
+import { MatchCount, Rank, Prize } from "../types/Statistics.js";
+export const NO_RANK = "NO_RANK";
+
+export const MATCH_COUNT: MatchCount = Object.freeze({
   first: 6,
   second: 5,
   third: 5,
   fourth: 4,
   fifth: 3,
-  sixth: 2,
 });
 
-export const RANK = Object.freeze({
+export const RANK: Rank = Object.freeze({
   first: "first",
   second: "second",
   third: "third",
@@ -15,7 +17,7 @@ export const RANK = Object.freeze({
   fifth: "fifth",
 });
 
-export const PRIZE = Object.freeze({
+export const PRIZE: Prize = Object.freeze({
   first: 2_000_000_000,
   second: 30_000_000,
   third: 1_500_000,
