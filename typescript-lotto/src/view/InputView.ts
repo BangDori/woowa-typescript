@@ -1,7 +1,7 @@
 import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 
-import { INPUT_MESSAGE } from "../constant/io.js";
+import { INPUT_MESSAGE } from "../constant/message/io.js";
 import { DELIMITER } from "../constant/setting.js";
 import { convertStringToNumberArray } from "../util/convert.js";
 import MoneyValidator from "../validator/MoneyValidator.js";

@@ -1,4 +1,4 @@
-import { LOTTO } from "../constant/setting.js";
+import { LOTTO } from "../constant/lotto.js";
 
 export function generateLottoNumbers(): number[] {
   const lottoNumbers = new Set<number>();

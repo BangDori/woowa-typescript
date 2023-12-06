@@ -1,5 +1,6 @@
 export interface MatchCount {
-  [first: string]: number;
+  [count: string]: number;
+  first: number;
   second: number;
   third: number;
   fourth: number;
@@ -7,7 +8,8 @@ export interface MatchCount {
 }
 
 export interface Rank {
-  [first: string]: string;
+  [rank: string]: string;
+  first: string;
   second: string;
   third: string;
   fourth: string;
@@ -15,7 +17,8 @@ export interface Rank {
 }
 
 export interface Prize {
-  [first: string]: number;
+  [prize: string]: number;
+  first: number;
   second: number;
   third: number;
   fourth: number;

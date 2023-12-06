@@ -7,7 +7,7 @@ import {
   PRIZE,
   RANK,
 } from "../constant/statistics.js";
-import { LOTTO_PRICE } from "../constant/setting.js";
+import { LOTTO_PRICE } from "../constant/lotto.js";
 
 class Statistics {
   private rankBoard: RankBoard;

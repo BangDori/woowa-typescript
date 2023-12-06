@@ -1,5 +1,5 @@
-import { LOTTO } from "../constant/setting.js";
-import { COMMON_ERROR, LOTTO_ERROR } from "../constant/error.js";
+import { LOTTO } from "../constant/lotto.js";
+import { COMMON_ERROR, LOTTO_ERROR } from "../constant/message/error.js";
 import CustomError from "../error/CustomError.js";
 
 class CommonValidator {

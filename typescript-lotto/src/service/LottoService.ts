@@ -1,5 +1,5 @@
 import WinningLotto from "../domain/WinningLotto.js";
-import { LOTTO_PRICE } from "../constant/setting.js";
+import { LOTTO_PRICE } from "../constant/lotto.js";
 import Lotto from "../domain/Lotto.js";
 import { generateLottoNumbers } from "../util/generator.js";
 

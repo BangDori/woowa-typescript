@@ -1,4 +1,4 @@
-import { LOTTO_COUNT, LOTTO_PRICE, LOTTO } from "./setting.js";
+import { LOTTO_COUNT, LOTTO_PRICE, LOTTO } from "../lotto.js";
 
 export const ERROR_PREFIX = "[ERROR] ";
 

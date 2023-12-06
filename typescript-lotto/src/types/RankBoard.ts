@@ -1,5 +1,6 @@
 export default interface RankBoard {
-  [first: string]: number;
+  [rank: string]: number;
+  first: number;
   second: number;
   third: number;
   fourth: number;

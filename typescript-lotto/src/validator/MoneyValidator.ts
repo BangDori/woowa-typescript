@@ -1,5 +1,6 @@
-import { MONEY_ERROR } from "../constant/error.js";
-import { LOTTO_PRICE, ZERO } from "../constant/setting.js";
+import { MONEY_ERROR } from "../constant/message/error.js";
+import { LOTTO_PRICE } from "../constant/lotto.js";
+import { ZERO } from "../constant/setting.js";
 import CustomError from "../error/CustomError.js";
 import CommonValidator from "./CommonValidator.js";
 

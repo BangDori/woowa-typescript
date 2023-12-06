@@ -1,5 +1,5 @@
 import Lotto from "../domain/Lotto.js";
-import { OUTPUT_MESSAGE } from "../constant/io.js";
+import { OUTPUT_MESSAGE } from "../constant/message/io.js";
 
 const OutputView = {
   printErrorMessage: (errorMessage: string) => {
