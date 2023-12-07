@@ -7,8 +7,8 @@
 
 ## Chapter 2
 
-1. [타입이란](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.1+%ED%83%80%EC%9E%85%EC%9D%B4%EB%9E%80+%281%29)
-2. [타입스크립트의 타입 시스템](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.2+%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98+%ED%83%80%EC%9E%85+%EC%8B%9C%EC%8A%A4%ED%85%9C+%281%29)
+1. [타입이란](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.1+%ED%83%80%EC%9E%85%EC%9D%B4%EB%9E%80)
+2. [타입스크립트의 타입 시스템](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.2+%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98+%ED%83%80%EC%9E%85+%EC%8B%9C%EC%8A%A4%ED%85%9C)
 
 ## 미니 프로젝트
 
