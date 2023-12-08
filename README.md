@@ -9,10 +9,11 @@
 
 1. [타입이란](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.1+%ED%83%80%EC%9E%85%EC%9D%B4%EB%9E%80)
 2. [타입스크립트의 타입 시스템](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+2.2+%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98+%ED%83%80%EC%9E%85+%EC%8B%9C%EC%8A%A4%ED%85%9C)
+3. [타입스크립트만의 독자적 타입 시스템](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+3.1+%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A7%8C%EC%9D%98+%EB%8F%85%EC%9E%90%EC%A0%81+%ED%83%80%EC%9E%85+%EC%8B%9C%EC%8A%A4%ED%85%9C)
 
 ## 미니 프로젝트
 
 1. 우아한 테크코스 6기 프리코스 **baseball** [Javascript](https://github.com/BangDori/javascript-baseball-6/tree/BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-baseball)
 2. 우아한 테크코스 6기 프리코스 **racingcar** [Javascript](https://github.com/BangDori/javascript-racingcar-6/tree/BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-racingcar)
 3. 우아한 테크코스 6기 프리코스 **lotto** [Javascript](https://github.com/BangDori/javascript-lotto-6/tree/BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-lotto)
-4. 우아한 테크코스 6기 프리코스 **christmas** [Javascript](https://github.com/BangDori/javascript-christmas-6-BangDori) To Typescript
+4. 우아한 테크코스 6기 프리코스 **christmas** [Javascript](https://github.com/BangDori/javascript-christmas-6-BangDori) To [Typescript](https://github.com/BangDori/woowa-typescript/tree/main/typescript-christmas)
