@@ -1,14 +1,11 @@
-import EventManager from "../EventManager.js";
 import { EVENT } from "../../constant/event.js";
 
-class WeekendEvent extends EventManager {
+class WeekendEvent {
   private readonly name: string;
   private readonly date: number[];
   private readonly perMain: number;
 
   constructor() {
-    super();
-
     this.name = "주말 할인";
     this.date = [1, 2];
     this.perMain = EVENT.year;
@@ -18,13 +15,13 @@ class WeekendEvent extends EventManager {
     return date in this.date;
   }
 
-  calculateEventReward(mainCount: number): number {
-    return mainCount * this.perMain;
-  }
-
   provideEventReward(mainCount: number) {
     const eventReward: number = this.calculateEventReward(mainCount);
-    this.applyDiscountEvent(this.name, eventReward);
+    return { name: this.name, reward: eventReward };
+  }
+
+  private calculateEventReward(mainCount: number): number {
+    return mainCount * this.perMain;
   }
 }
 

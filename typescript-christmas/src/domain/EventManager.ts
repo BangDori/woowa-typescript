@@ -1,34 +1,43 @@
-import { EventInfo, GiftEventInfo } from "../types/Event.js";
+import { NO_REWARD } from "../constant/event.js";
+import { Reward } from "../types/Event.js";
 
 class EventManager {
-  private gift: GiftEventInfo;
-  private event: EventInfo[];
+  private gift: Reward;
+  private event: Reward[];
 
   constructor() {
-    this.gift = undefined;
+    this.gift = NO_REWARD;
     this.event = [];
   }
 
-  applyGiftEvent(eventName: string, eventItem: string) {
-    this.gift = [eventName, eventItem];
+  applyGiftEvent(reward: Reward) {
+    this.gift = reward;
   }
 
-  applyDiscountEvent(eventName: string, discount: number) {
-    this.event = this.event.concat([eventName, discount]);
+  applyDiscountEvent(reward: Reward) {
+    this.event = this.event.concat(reward);
   }
 
-  getGift() {
+  getGift(): Reward {
     return this.gift;
   }
 
-  getAllEvent() {
-    return [...this.event];
+  getAllEvent(): Reward[] {
+    return [...this.event, this.gift];
   }
 
-  getTotalEventDiscount() {
-    return this.event.reduce((totalDiscount, [namae, price]) => {
-      return totalDiscount + price;
-    }, 0);
+  getTotalRewardAmount(): number {
+    return (
+      this.gift.reward +
+      this.event.reduce((totalDiscount, { reward }) => {
+        return totalDiscount + reward;
+      }, 0)
+    );
+  }
+
+  getTotalDiscountAmount(): number {
+    const totalRewardAmount = this.getTotalRewardAmount();
+    return totalRewardAmount - this.gift.reward;
   }
 }
 

@@ -23,6 +23,16 @@ class Order {
   getDate(): number {
     return this.date;
   }
+
+  getCountByType(type: string): number {
+    return this.menus.reduce((totalCount, [name, count]) => {
+      if (MENU_BOARD[name].type === type) {
+        return totalCount + count;
+      }
+
+      return totalCount;
+    }, 0);
+  }
 }
 
 export default Order;

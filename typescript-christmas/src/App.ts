@@ -1,6 +1,7 @@
 import EventController from "./controller/EventController.js";
 import OrderController from "./controller/OrderController.js";
 import Order from "./domain/Order.js";
+import { rl } from "./view/InputView.js";
 
 class App {
   private readonly orderController: OrderController;
@@ -13,9 +14,9 @@ class App {
 
   async run() {
     const order: Order = await this.orderController.orderMenu();
-    this.eventController.init();
+    this.eventController.play(order);
 
-    console.log(order, this.eventController);
+    rl.close();
   }
 }
 

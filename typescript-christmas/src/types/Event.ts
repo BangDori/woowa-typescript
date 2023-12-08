@@ -7,3 +7,9 @@ export interface Badge {
     required: number;
   };
 }
+
+export interface Reward {
+  name: string;
+  item?: string;
+  reward: number;
+}

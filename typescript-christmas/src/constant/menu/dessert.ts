@@ -1,11 +1,13 @@
+export const DESSERT_MENU = "dessert";
+
 const 초코케이크 = Object.freeze({
   name: "초코케이크",
-  type: "dessert",
+  type: DESSERT_MENU,
   price: 15_000,
 });
 const 아이스크림 = Object.freeze({
   name: "아이스크림",
-  type: "dessert",
+  type: DESSERT_MENU,
   price: 5_000,
 });
 

@@ -1,12 +1,9 @@
-import EventManager from "../EventManager.js";
 import { Badge } from "../../types/Event.js";
 
-class BadgeEvent extends EventManager {
+class BadgeEvent {
   private readonly badge: Badge;
 
   constructor() {
-    super();
-
     this.badge = this.initBadge();
   }
 
@@ -19,14 +16,14 @@ class BadgeEvent extends EventManager {
     };
   }
 
-  getBadge() {
-    const totalEventDiscount = this.getTotalEventDiscount();
-
-    for (const name in this.badge) {
-      if (totalEventDiscount >= this.badge[name].required) {
-        return name;
+  getBadge(totalReward: number): string {
+    for (const rank in this.badge) {
+      if (totalReward >= this.badge[rank].required) {
+        return this.badge[rank].name;
       }
     }
+
+    return this.badge.no.name;
   }
 }
 

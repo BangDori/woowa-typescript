@@ -1,16 +1,19 @@
-import EventManager from "../EventManager.js";
 import DRINK from "../../constant/menu/drink.js";
 
-class GiftEvent extends EventManager {
+type Menu = {
+  name: string;
+  type: string;
+  price: number;
+};
+
+class GiftEvent {
   private readonly name: string;
-  private readonly item: string;
+  private readonly item: Menu;
   private readonly required: number;
 
   constructor() {
-    super();
-
     this.name = "증정 이벤트";
-    this.item = DRINK["샴페인"].name;
+    this.item = DRINK["샴페인"];
     this.required = 120_000;
   }
 
@@ -18,8 +21,8 @@ class GiftEvent extends EventManager {
     return totalPrice >= this.required;
   }
 
-  provideChampagne() {
-    this.applyGiftEvent(this.name, this.item);
+  provideReward() {
+    return { name: this.name, item: this.item.name, reward: this.item.price };
   }
 }
 

@@ -1,4 +1,4 @@
-const MAIN_MENU = "main";
+export const MAIN_MENU = "main";
 
 const 티본스테이크 = Object.freeze({
   name: "티본스테이크",
