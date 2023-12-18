@@ -18,6 +18,7 @@
 ## Chapter 4
 
 1. [타입 확장의 장점](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+4.1+%ED%83%80%EC%9E%85+%ED%99%95%EC%9E%A5%ED%95%98%EA%B8%B0)
+2. [타입 좁히기](https://github.com/BangDori/woowa-typescript/issues?q=is%3Aissue+is%3Aopen+4.2+%ED%83%80%EC%9E%85+%EC%A2%81%ED%9E%88%EA%B8%B0)
 
 ## 미니 프로젝트
 
