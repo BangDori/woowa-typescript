@@ -5,6 +5,7 @@
 3. [Chapter 3 - 고급 타입](https://github.com/BangDori/woowa-typescript/labels/Chapter%203)
 4. [Chapter 4 - 타입 확장하기 및 좁히기](https://github.com/BangDori/woowa-typescript/labels/Chapter%204)
 5. [Chapter 5 - 타입 활용하기](https://github.com/BangDori/woowa-typescript/labels/Chapter%205)
+6. [Chapter 6 - 타입스크립트 컴파일](https://github.com/BangDori/woowa-typescript/labels/Chapter%206)
 
 ## 미니 프로젝트
 
