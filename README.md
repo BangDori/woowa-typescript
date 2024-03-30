@@ -7,6 +7,7 @@
 5. [Chapter 5 - 타입 활용하기](https://github.com/BangDori/woowa-typescript/labels/Chapter%205)
 6. [Chapter 6 - 타입스크립트 컴파일](https://github.com/BangDori/woowa-typescript/labels/Chapter%206)
 7. [Chapter 7 - 비동기 호출](https://github.com/BangDori/woowa-typescript/labels/Section%207)
+8. [Chapter 8 - JSX에서 TSX로](https://github.com/BangDori/woowa-typescript/labels/Section%208)
 
 ## 미니 프로젝트
 
