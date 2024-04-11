@@ -6,8 +6,10 @@
 4. [Chapter 4 - 타입 확장하기 및 좁히기](https://github.com/BangDori/woowa-typescript/labels/Chapter%204)
 5. [Chapter 5 - 타입 활용하기](https://github.com/BangDori/woowa-typescript/labels/Chapter%205)
 6. [Chapter 6 - 타입스크립트 컴파일](https://github.com/BangDori/woowa-typescript/labels/Chapter%206)
-7. [Chapter 7 - 비동기 호출](https://github.com/BangDori/woowa-typescript/labels/Section%207)
-8. [Chapter 8 - JSX에서 TSX로](https://github.com/BangDori/woowa-typescript/labels/Section%208)
+7. [Chapter 7 - 비동기 호출](https://github.com/BangDori/woowa-typescript/labels/Chapter%207)
+8. [Chapter 8 - JSX에서 TSX로](https://github.com/BangDori/woowa-typescript/labels/Chapter%208)
+9. [Chapter 9 - 훅](https://github.com/BangDori/woowa-typescript/labels/Chapter%209)
+10. [Chapter 10 - 상태 관리](https://github.com/BangDori/woowa-typescript/labels/Chapter%2010)
 
 ## 미니 프로젝트
 
