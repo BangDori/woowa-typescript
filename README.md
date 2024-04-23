@@ -11,6 +11,7 @@
 9. [Chapter 9 - 훅](https://github.com/BangDori/woowa-typescript/labels/Chapter%209)
 10. [Chapter 10 - 상태 관리](https://github.com/BangDori/woowa-typescript/labels/Chapter%2010)
 11. [Chapter 11 - CSS-in-JS](https://github.com/BangDori/woowa-typescript/labels/Chapter%2011)
+12. [Chapter 12 - 타입스크립트 프로젝트 관리](https://github.com/BangDori/woowa-typescript/labels/Chapter%2012)
 
 ## 미니 프로젝트
 
